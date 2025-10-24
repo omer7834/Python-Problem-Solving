@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import deque
+
+T = int(input())
+
+for _ in range(T):
+    n = int(input())
+    d = deque(map(int, input().split()))
+    
+    # Initialize the "top" of the stack with infinity
+    # The first cube picked will always be <= infinity
+    current_top_size = float('inf')
+    
+    possible = True
+    
